@@ -1,0 +1,39 @@
+.developer {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--font-black);
+}
+
+.copyright,
+#copyright-span {
+  font-family: 'Inter', sans-serif;
+}
+
+.github-link {
+  font-family: 'Caveat', sans-serif;
+  position: relative;
+  background: var(--github-font-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.github-logo {
+  height: var(--github-icon-height);
+  width: auto;
+  position: absolute;
+  left: 65px;
+  opacity: 0.9;
+  transition: transform 0.4s ease-in-out;
+}
+
+.github-logo:hover {
+  transform: rotate(720deg);
+}

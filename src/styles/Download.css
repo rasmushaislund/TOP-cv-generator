@@ -1,0 +1,22 @@
+.download-btn {
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: 5px;
+  margin-left: auto;
+  background-color: inherit;
+  height: 35px;
+  width: 35px;
+  transition: all 0.2s 0s ease-in-out;
+}
+
+.download-btn:hover {
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.icon {
+  height: var(--icon-general-height);
+  width: var(--icon-general-width);
+}
