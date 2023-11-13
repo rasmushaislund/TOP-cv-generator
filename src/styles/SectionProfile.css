@@ -1,0 +1,4 @@
+#profile-text {
+  width: var(--section-main-width);
+  align-self: flex-end;
+}

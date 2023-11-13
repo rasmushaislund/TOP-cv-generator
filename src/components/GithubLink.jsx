@@ -15,7 +15,7 @@ export default function GithubLink() {
       >
         Rasmus H.
         <img
-          src="../public/img/github-logo.svg"
+          src="img/github-logo-white.svg"
           alt="github logo"
           className="github-logo"
         />

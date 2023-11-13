@@ -1,0 +1,25 @@
+.sub-section-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 5px;
+  width: var(--sub-section-info-width);
+}
+
+.sub-section-info > input:first-child {
+  font-weight: 700;
+}
+
+.from-and-to {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+#date-from,
+#date-to {
+  width: 50%;
+  padding: initial 0px;
+  text-align: left;
+  padding: 5px 10px;
+}

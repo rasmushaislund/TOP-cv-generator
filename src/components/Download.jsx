@@ -5,7 +5,7 @@ export default function Download() {
     <>
       <button className="btn download-btn">
         <img
-          className="icon"
+          className="btn-icon"
           src="../public/img/tray-arrow-down.svg"
           alt="download"
         />

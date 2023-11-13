@@ -1,0 +1,22 @@
+.separator {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 15px;
+  margin-bottom: var(--sep-margin-bottom);
+}
+
+.profile-heading {
+  font-weight: 700;
+}
+
+.separator-line {
+  width: var(--section-main-width);
+  height: 1px;
+  border: 2px dashed black;
+}
+
+.section-header-icon {
+  height: var(--section-sep-icon-height);
+  width: var(--section-sep-icon-width);
+}

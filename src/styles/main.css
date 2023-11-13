@@ -16,18 +16,44 @@
   );
   --color-black: rgba(32, 33, 36, 1);
   --color-white: rgba(248, 249, 250, 1);
-  --body-background: rgb(204, 192, 179);
+  --body-background: rgb(255, 255, 255);
+  /* --text: rgb(2, 3, 2); */
+  /* --background: rgb(249, 251, 250); */
+  /* --primary-color: rgb(187, 188, 211);
+  --secondary-color: rgb(227, 211, 220);
+  --accent-color: rgb(143, 141, 91); */
+  --grey-200: rgb(204, 210, 214);
+  --grey-400: rgb(166, 169, 171);
+  --primary-color: rgb(100, 178, 185);
+  --secondary-color: rgb(209, 232, 234);
+  --accent-color: rgb(35, 106, 118);
 
   /* Dimension */
   --github-icon-height: 20px;
   --github-icon-width: 20px;
-  --icon-general-height: 20px;
-  --icon-general-width: 20px;
+  --btn-icon-height: 25px;
+  --btn-icon-width: 25px;
+  --avatar-img-height: 175px;
+  --avatar-img-width: 50px;
+  --small-icon-height: 25px;
+  --small-icon-width: 25px;
+  --btn-height: 35px;
+  --btn-width: 35px;
+  --section-sep-icon-height: 30px;
+  --section-sep-icon-width: 30px;
+  --section-main-width: 70%;
+  --sub-section-info-width: 25%;
 
   /* Padding */
   --body-padding: 10px 30px;
+  --header-padding: 10px 10px;
+  --input-padding: 5px 10px;
+  --btn-padding: 5px;
+  --content-padding: 0px 40px;
 
   /* Margin */
+  --sep-margin-bottom: 10px;
+  --section-margin-bottom: 30px;
 
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -57,7 +83,11 @@ body {
   align-items: center;
   width: 100%;
   padding: var(--body-padding);
-  background-color: var(--body-background);
+  /* background-color: var(--body-background); */
+  background-image: url('img/ferns.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 #root {
@@ -65,4 +95,70 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: var(--input-padding);
+  border: 3px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: transparent;
+  transition: border-color 0.2s 0s ease-in-out;
+}
+
+input:enabled,
+textarea:enabled {
+  border-color: var(--grey-400);
+}
+
+input:hover,
+textarea:hover {
+  border-color: var(--accent-color);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-black);
+}
+
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: var(--btn-padding);
+  transition: all 0.2s 0s ease-in-out;
+  background-color: inherit;
+  height: var(--btn-height);
+  width: var(--btn-width);
+  padding: var(--btn-padding);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+button:disabled {
+  display: none;
+}
+
+button:enabled {
+  display: auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: var(--content-padding);
+  margin-bottom: var(--section-margin-bottom);
+  position: relative;
 }

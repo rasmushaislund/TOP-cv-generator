@@ -1,0 +1,24 @@
+.add-sub-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-btn {
+  opacity: 0.3;
+  width: 30%;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.add-icon {
+  height: var(--section-sep-icon-height);
+  width: var(--section-sep-icon-width);
+}
