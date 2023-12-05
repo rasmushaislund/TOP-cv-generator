@@ -5,6 +5,21 @@ import SubSectionInfo from './SubSectionInfo';
 import DeleteSection from './DeleteSection';
 
 export default function SectionWork() {
+  const deleteSubSection = (e) => {
+    const target = e.target;
+    const ancestorChild = target.closest('.section-input');
+    const ancestorParent = ancestorChild.closest('.section-work');
+
+    if (target.matches('.delete-section, .delete-icon')) {
+      ancestorParent.removeChild(ancestorChild);
+    }
+  };
+
+  const addSubSection = (e) => {
+    const target = e.target;
+    console.log(target);
+  };
+
   return (
     <div className="section section-work">
       <SectionSep name={'EXPERIENCE'} imgPath={'/img/briefcase.svg'} />
@@ -17,9 +32,9 @@ export default function SectionWork() {
           disabled={false}
           maxLength={300}
         ></textarea>
-        <DeleteSection />
+        <DeleteSection handleClick={deleteSubSection} />
       </div>
-      <AddSubSection />
+      <AddSubSection handleClick={addSubSection} />
     </div>
   );
 }
