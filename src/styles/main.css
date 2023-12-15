@@ -114,6 +114,10 @@ textarea {
   transition: border-color 0.2s 0s ease-in-out;
 }
 
+input[type='file'] {
+  display: none;
+}
+
 input:enabled,
 textarea:enabled {
   border-color: var(--grey-400);

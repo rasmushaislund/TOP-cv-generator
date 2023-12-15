@@ -1,5 +1,10 @@
 .download-btn {
   margin-left: auto;
+  background-color: var(--secondary-color);
+}
+
+.download-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-icon {

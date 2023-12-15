@@ -19,8 +19,27 @@
 }
 
 .avatar-profile {
+  position: relative;
   display: flex;
   column-gap: 25px;
+}
+
+.add-photo-label {
+  position: absolute;
+  left: 20%;
+  top: 75%;
+  padding: 7px;
+  background-color: var(--color-white);
+  border-radius: 50px;
+}
+
+.add-photo-label img {
+  height: var(--section-sep-icon-height);
+  width: var(--section-sep-icon-width);
+}
+
+.add-photo-label:hover {
+  cursor: pointer;
 }
 
 .avatar-info {
