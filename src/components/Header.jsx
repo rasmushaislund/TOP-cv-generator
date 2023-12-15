@@ -8,9 +8,18 @@ export default function Header() {
       <div className="avatar">
         <div className="avatar-profile">
           <img
-            src="/img/avatar.jpg"
+            src="/img/avatar-placeholder.svg"
             alt="profile picture"
             className="avatar-img"
+          />
+          <label className="add-photo-label" htmlFor="add-photo">
+            <img src="/img/add-photo.svg" alt="add photo" />
+          </label>
+          <input
+            type="file"
+            id="add-photo"
+            className="new-photo"
+            accept=".jpeg, .jpg, .png"
           />
           <div className="avatar-info">
             <input
