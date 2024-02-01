@@ -3,38 +3,48 @@ import AddSubSection from './AddSubSection';
 import SectionSep from './SectionSep';
 import SubSectionInfo from './SubSectionInfo';
 import DeleteSection from './DeleteSection';
+import { useState } from 'react';
+import { v4 as uuid4 } from 'uuid';
 
 export default function SectionWork() {
-  const deleteSubSection = (e) => {
-    const target = e.target;
-    const ancestorChild = target.closest('.section-input');
-    const ancestorParent = ancestorChild.closest('.section-work');
+  const [list, setList] = useState([]);
 
-    if (target.matches('.delete-section, .delete-icon')) {
-      ancestorParent.removeChild(ancestorChild);
-    }
+  const handleAddSubSection = () => {
+    const newSubSection = {
+      id: uuid4(),
+    };
+
+    setList([...list, newSubSection]);
   };
 
-  const addSubSection = (e) => {
-    const target = e.target;
-    console.log(target);
+  const handleDeleteSubSection = (id) => {
+    const newList = list.filter((subSection) => subSection.id !== id);
+    setList(newList);
   };
 
   return (
     <div className="section section-work">
       <SectionSep name={'EXPERIENCE'} imgPath={'/img/briefcase.svg'} />
       <div className="section-input">
-        <SubSectionInfo what={'Title'} where={'Company'} />
-        <textarea
-          name="work-text"
-          id="work-text"
-          rows="5"
-          disabled={false}
-          maxLength={300}
-        ></textarea>
-        <DeleteSection handleClick={deleteSubSection} />
+        <ul>
+          {list.map((subSection) => (
+            <li key={subSection.id}>
+              <SubSectionInfo what={'Title'} where={'Company'} />
+              <textarea
+                name="work-text"
+                id="work-text"
+                rows="5"
+                disabled={false}
+                maxLength={300}
+              ></textarea>
+              <DeleteSection
+                deleteSub={handleDeleteSubSection(subSection.id)}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
-      <AddSubSection handleClick={addSubSection} />
+      <AddSubSection add={handleAddSubSection} />
     </div>
   );
 }
