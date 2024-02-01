@@ -1,9 +1,10 @@
-.section-input {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--sep-margin-bottom);
-}
-
 #work-text {
   width: var(--section-main-width);
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: var(--sep-margin-bottom);
 }

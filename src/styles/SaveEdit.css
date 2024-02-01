@@ -1,5 +1,7 @@
 .save-edit-btn {
-  margin-left: auto;
+  display: flex;
+  justify-content: end;
+  column-gap: 5px;
 }
 
 .btn-icon {
