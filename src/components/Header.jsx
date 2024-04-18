@@ -1,10 +1,20 @@
 import '../styles/Header.css';
 import SaveEdit from './SaveEdit';
+import { useState } from 'react';
 
 export default function Header() {
+  const [bool, setBool] = useState(true);
+
+  const handleToggle = () => {
+    if (!bool) {
+      setBool(true);
+    } else {
+      setBool(false);
+    }
+  };
   return (
     <div className="header">
-      <SaveEdit />
+      <SaveEdit toggle={handleToggle} />
       <div className="avatar">
         <div className="avatar-profile">
           <img
@@ -25,14 +35,14 @@ export default function Header() {
             <input
               type="text"
               maxLength={50}
-              disabled={false}
+              disabled={bool}
               placeholder="Enter name"
               name="name"
               autoFocus
             />
             <textarea
               maxLength={100}
-              disabled={false}
+              disabled={bool}
               rows="4"
               placeholder="Short profile description"
               name="short-profile"
@@ -43,6 +53,7 @@ export default function Header() {
           <div className="contact-item">
             <input
               type="tel"
+              disabled={bool}
               name="telephone"
               id="input-tele"
               placeholder="Enter phone number"
@@ -56,6 +67,7 @@ export default function Header() {
           <div className="contact-item">
             <input
               type="email"
+              disabled={bool}
               name="email"
               id="input-email"
               placeholder="Enter email"
@@ -65,6 +77,7 @@ export default function Header() {
           <div className="contact-item">
             <input
               type="text"
+              disabled={bool}
               name="address"
               id="input-address"
               placeholder="Enter city"
@@ -78,6 +91,7 @@ export default function Header() {
           <div className="contact-item">
             <input
               type="url"
+              disabled={bool}
               name="linkedin"
               id="input-linkedin"
               placeholder="Insert url to linkedIn profile"
@@ -91,6 +105,7 @@ export default function Header() {
           <div className="contact-item">
             <input
               type="url"
+              disabled={bool}
               name="github"
               id="input-github"
               placeholder="Insert url to Github profile"
