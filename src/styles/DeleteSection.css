@@ -2,3 +2,7 @@
   position: absolute;
   left: 96.7%;
 }
+
+.hide {
+  display: none;
+}
