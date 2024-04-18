@@ -1,8 +1,8 @@
 import '../styles/AddSubSection.css';
 
-export default function AddSubSection({ add }) {
+export default function AddSubSection({ add, hide }) {
   return (
-    <div className="add-sub-section">
+    <div className={`add-sub-section${hide ? ' hide' : ''}`}>
       <button
         className="btn add-btn"
         type="button"
