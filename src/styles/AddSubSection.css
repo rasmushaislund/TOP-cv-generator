@@ -22,3 +22,7 @@
   height: var(--section-sep-icon-height);
   width: var(--section-sep-icon-width);
 }
+
+.hide {
+  display: none;
+}
