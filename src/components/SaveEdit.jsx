@@ -1,7 +1,7 @@
 import '../styles/SaveEdit.css';
 import { useState } from 'react';
 
-export default function SaveEdit() {
+export default function SaveEdit({ toggle }) {
   const [enable, setEnable] = useState(false);
   const [imageName, setImageName] = useState('edit-outline');
 
@@ -21,12 +21,12 @@ export default function SaveEdit() {
           src={`/img/${imageName}.svg`}
           alt="save/edit toggle"
           className="btn-icon"
-          onClick={toggleEdit}
+          onClick={() => {
+            toggleEdit();
+            toggle();
+          }}
         />
       </button>
-      {/* <button type="button">
-        <img src="/img/edit-outline.svg" alt="edit" className="btn-icon" />
-      </button> */}
     </div>
   );
 }
