@@ -103,3 +103,7 @@
   height: var(--small-icon-height);
   width: auto;
 }
+
+.hide {
+  display: none;
+}
