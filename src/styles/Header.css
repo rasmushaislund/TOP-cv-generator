@@ -24,6 +24,13 @@
   column-gap: 25px;
 }
 
+.avatar-img {
+  height: var(--avatar-img-height);
+  width: var(--avatar-img-width);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+}
+
 .add-photo-label {
   position: absolute;
   left: 20%;
@@ -73,13 +80,6 @@
 
 .avatar-info input {
   font-weight: 700;
-}
-
-.avatar-img {
-  height: var(--avatar-img-height);
-  width: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
 }
 
 .contact {
