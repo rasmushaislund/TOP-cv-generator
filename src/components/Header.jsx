@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export default function Header() {
   const [bool, setBool] = useState(true);
+  const [avatarImage, setAvatarImage] = useState('/img/avatar-placeholder.svg');
 
   const handleToggle = () => {
     if (!bool) {
@@ -12,17 +13,30 @@ export default function Header() {
       setBool(false);
     }
   };
+
+  const onImageChange = (e) => {
+    // if (e.target.files && e.target.files[0]) {
+    setAvatarImage(URL.createObjectURL(e.target.files[0]));
+    // }
+    console.log(avatarImage);
+  };
+
+  const deleteImage = () => {
+    const defaultImage = '/img/avatar-placeholder.svg';
+    setAvatarImage(defaultImage);
+    console.log(avatarImage);
+  };
+
   return (
     <div className="header">
       <SaveEdit toggle={handleToggle} />
       <div className="avatar">
         <div className="avatar-profile">
-          <img
-            src="/img/avatar-placeholder.svg"
-            alt="profile picture"
-            className="avatar-img"
-          />
-          <label className="add-photo-label" htmlFor="add-photo">
+          <img src={avatarImage} alt="profile picture" className="avatar-img" />
+          <label
+            className={`add-photo-label${bool ? ' hide' : ''}`}
+            htmlFor="add-photo"
+          >
             <img src="/img/add-photo.svg" alt="add photo" />
           </label>
           <input
@@ -30,8 +44,13 @@ export default function Header() {
             id="add-photo"
             className="new-photo"
             accept=".jpeg, .jpg, .png"
+            onInput={onImageChange}
           />
-          <button className="delete-photo" htmlFor="delete-photo">
+          <button
+            className={`delete-photo${bool ? ' hide' : ''}`}
+            htmlFor="delete-photo"
+            onClick={deleteImage}
+          >
             <img src="/img/delete.svg" alt="delete photo" />
           </button>
           <div className="avatar-info">
