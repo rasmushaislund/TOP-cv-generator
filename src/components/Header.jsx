@@ -31,6 +31,9 @@ export default function Header() {
             className="new-photo"
             accept=".jpeg, .jpg, .png"
           />
+          <button className="delete-photo" htmlFor="delete-photo">
+            <img src="/img/delete.svg" alt="delete photo" />
+          </button>
           <div className="avatar-info">
             <input
               type="text"
