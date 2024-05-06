@@ -1,14 +1,15 @@
 import '../styles/Download.css';
 
-export default function Download() {
+export function Download({ getPDF }) {
   return (
     <>
-      <button className="btn download-btn">
+      <button className="btn download-btn" onClick={getPDF}>
         <img
           className="btn-icon"
-          src="../public/img/tray-arrow-down.svg"
+          src="../img/tray-arrow-down.svg"
           alt="download"
         />
+        Download
       </button>
     </>
   );
