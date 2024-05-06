@@ -8,3 +8,18 @@ li {
   list-style: none;
   margin-bottom: var(--sep-margin-bottom);
 }
+
+.section-input > ul > li {
+  position: relative;
+}
+
+@media (max-width: 575px) {
+  li {
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+  }
+  #work-text {
+    width: 100%;
+  }
+}

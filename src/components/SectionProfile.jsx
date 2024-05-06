@@ -3,7 +3,7 @@ import SectionSep from './SectionSep';
 import SaveEdit from './SaveEdit';
 import { useState } from 'react';
 
-export default function SectionProfile() {
+export default function SectionProfile({ disabled }) {
   const [bool, setBool] = useState(true);
 
   const handleToggle = () => {
@@ -24,6 +24,7 @@ export default function SectionProfile() {
         rows="8"
         disabled={bool}
         maxLength={250}
+        placeholder={bool === true ? '' : 'Enter profile text'}
       ></textarea>
     </div>
   );

@@ -1,13 +1,25 @@
 .download-btn {
-  margin-left: auto;
   background-color: var(--secondary-color);
+  width: fit-content;
+  padding: 0 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
 }
 
-.download-btn:hover {
+.download-btn:hover,
+.clear-btn:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-icon {
   height: var(--btn-icon-height);
   width: var(--btn-icon-width);
+}
+
+@media (max-width: 575px) {
+  .download-btn {
+    margin-right: 5px;
+  }
 }

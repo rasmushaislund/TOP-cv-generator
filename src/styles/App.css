@@ -2,7 +2,13 @@
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  max-width: 1280px;
+  width: 100%;
   color: var(--color-black);
   margin-top: 50px;
+}
+
+.action-tools {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
 }

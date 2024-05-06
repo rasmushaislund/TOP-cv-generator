@@ -1,3 +1,14 @@
 #education-text {
   width: var(--section-main-width);
 }
+
+@media (max-width: 575px) {
+  li {
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+  }
+  #education-text {
+    width: 100%;
+  }
+}

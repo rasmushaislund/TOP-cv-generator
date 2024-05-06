@@ -8,3 +8,7 @@
   height: var(--btn-icon-height);
   width: var(--btn-icon-width);
 }
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,27 @@
+.title-section {
+  width: 100%;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 4rem;
+  margin-top: 50px;
+}
+
+.sub-title {
+  color: var(--grey-600);
+  margin-top: 20px;
+  max-width: 50%;
+}
+
+@media (max-width: 575px) {
+  .title {
+    font-size: 3rem;
+  }
+  .sub-title {
+    max-width: 100%;
+  }
+  .title-section {
+    padding: 0 10px;
+  }
+}
