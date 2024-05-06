@@ -32,33 +32,39 @@ export default function Header() {
       <SaveEdit toggle={handleToggle} />
       <div className="avatar">
         <div className="avatar-profile">
-          <img src={avatarImage} alt="profile picture" className="avatar-img" />
-          <label
-            className={`add-photo-label${bool ? ' hide' : ''}`}
-            htmlFor="add-photo"
-          >
-            <img src="/img/add-photo.svg" alt="add photo" />
-          </label>
-          <input
-            type="file"
-            id="add-photo"
-            className="new-photo"
-            accept=".jpeg, .jpg, .png"
-            onInput={onImageChange}
-          />
-          <button
-            className={`delete-photo${bool ? ' hide' : ''}`}
-            htmlFor="delete-photo"
-            onClick={deleteImage}
-          >
-            <img src="/img/delete.svg" alt="delete photo" />
-          </button>
+          <div className="profile-picture">
+            <img
+              src={avatarImage}
+              alt="profile picture"
+              className="avatar-img"
+            />
+            <label
+              className={`add-photo-label${bool ? ' hide' : ''}`}
+              htmlFor="add-photo"
+            >
+              <img src="/img/add-photo.svg" alt="add photo" />
+            </label>
+            <input
+              type="file"
+              id="add-photo"
+              className="new-photo"
+              accept=".jpeg, .jpg, .png"
+              onInput={onImageChange}
+            />
+            <button
+              className={`delete-photo${bool ? ' hide' : ''}`}
+              htmlFor="delete-photo"
+              onClick={deleteImage}
+            >
+              <img src="/img/delete.svg" alt="delete photo" />
+            </button>
+          </div>
           <div className="avatar-info">
             <input
               type="text"
               maxLength={50}
               disabled={bool}
-              placeholder="Enter name"
+              placeholder="Name"
               name="name"
               autoFocus
             />
@@ -78,7 +84,7 @@ export default function Header() {
               disabled={bool}
               name="telephone"
               id="input-tele"
-              placeholder="Enter phone number"
+              placeholder="Phone number"
             />
             <img
               src="/img/phone-in-talk.svg"
@@ -92,7 +98,7 @@ export default function Header() {
               disabled={bool}
               name="email"
               id="input-email"
-              placeholder="Enter email"
+              placeholder="Email"
             />
             <img src="/img/email.svg" alt="mail" className="contact-img" />
           </div>
@@ -102,7 +108,7 @@ export default function Header() {
               disabled={bool}
               name="address"
               id="input-address"
-              placeholder="Enter city"
+              placeholder="City"
             />
             <img
               src="/img/map-marker-radius.svg"
@@ -116,7 +122,7 @@ export default function Header() {
               disabled={bool}
               name="linkedin"
               id="input-linkedin"
-              placeholder="Insert url to linkedIn profile"
+              placeholder="Url to linkedIn profile"
             />
             <img
               src="/img/linkedin.svg"
@@ -130,7 +136,7 @@ export default function Header() {
               disabled={bool}
               name="github"
               id="input-github"
-              placeholder="Insert url to Github profile"
+              placeholder="Url to Github profile"
             />
             <img
               src="/img/github-logo.svg"
