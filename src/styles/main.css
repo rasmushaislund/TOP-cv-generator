@@ -84,7 +84,7 @@ body {
   align-items: center;
   /* padding: var(--body-padding); */
   background-color: var(--body-background);
-  background-image: url('img/polygon-multi.jpg');
+  background-image: url('/img/polygon-multi.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
