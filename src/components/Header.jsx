@@ -122,7 +122,7 @@ export default function Header() {
               disabled={bool}
               name="linkedin"
               id="input-linkedin"
-              placeholder="Url to linkedIn profile"
+              placeholder="URL to linkedIn profile"
             />
             <img
               src="/img/linkedin.svg"
@@ -136,7 +136,7 @@ export default function Header() {
               disabled={bool}
               name="github"
               id="input-github"
-              placeholder="Url to Github profile"
+              placeholder="URL to Github profile"
             />
             <img
               src="/img/github-logo.svg"
